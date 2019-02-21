@@ -11,3 +11,8 @@ This project contains two sub projects:
 
 See:  http://awhitford.github.com/lombok.maven/
 
+
+====
+1. `mvn clean deploy -pl .`
+2. `mvn clean deploy -pl lombok-maven-plugin`
+

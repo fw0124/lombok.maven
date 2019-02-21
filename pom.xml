@@ -4,7 +4,7 @@
 
   <groupId>org.projectlombok</groupId>
   <artifactId>lombok-maven</artifactId>
-  <version>1.18.4.0</version>
+  <version>1.18.4.0-parasoft</version>
   <packaging>pom</packaging>
 
   <name>Maven Plugin for Project Lombok</name>
@@ -52,14 +52,13 @@
   </ciManagement>
   <distributionManagement>
     <repository>
-      <id>sonatype-nexus-staging</id>
-      <name>Nexus Release Repository</name>
-      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+      <id>private-nexus-library-releases</id>
+      <url>http://10.74.68.44:8081/nexus/content/repositories/releases/</url>
     </repository>
-    <site>
-      <id>github.lombok.maven</id>
-      <url>scm:git:git@github.com:awhitford/lombok.maven.git</url>
-    </site>
+    <snapshotRepository>
+      <id>private-nexus-library-snapshots</id>
+      <url>http://10.74.68.44:8081/nexus/content/repositories/snapshots/</url>
+    </snapshotRepository>
   </distributionManagement>
 
   <properties>
@@ -67,7 +66,7 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <maven.api.minimum>3.3.9</maven.api.minimum>
     <maven.api.version>3.6.0</maven.api.version>
-    <lombok.version>1.18.4</lombok.version>
+    <lombok.version>1.18.4-parasoft</lombok.version>
     <releaseProfiles>sonatype-oss-release</releaseProfiles>
     <version.java>1.7</version.java>
   </properties>
